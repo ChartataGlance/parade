@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0d0b0a">
+<title>Parade Cafe Bistro — Food Menu</title>
+<style>
+:root{--bg:#0b0908;--panel:#151210;--panel2:#1c1714;--text:#f7f0e8;--muted:#b8aaa0;--brand:#b66d5d;--gold:#d1aa69;--line:#302722;--green:#70b57d;--allergy:#ffb454;--allergy-bg:rgba(255,180,84,.14);--allergy-line:rgba(255,180,84,.45);--shadow:0 16px 45px rgba(0,0,0,.28)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at top,#251813 0,#0b0908 42rem);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}.wrap{width:min(1180px,calc(100% - 28px));margin:auto}
+header{padding:46px 0 26px;text-align:center}.brand{font-family:Georgia,'Times New Roman',serif;letter-spacing:.18em;font-size:clamp(2.8rem,8vw,5.8rem);color:#c78070;line-height:.9}.subbrand{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:17px;color:#e7d8ce;font-weight:700;letter-spacing:.08em}.subbrand:before,.subbrand:after{content:"";height:1px;width:90px;background:linear-gradient(90deg,transparent,var(--brand))}.subbrand:after{background:linear-gradient(90deg,var(--brand),transparent)}.tagline{color:var(--muted);margin:18px auto 0;max-width:610px;line-height:1.6}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(11,9,8,.88);backdrop-filter:blur(18px);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid var(--line)}.toolbar-inner{display:flex;gap:10px;align-items:center;padding:12px 0;overflow:auto}.search{min-width:220px;flex:1;position:relative}.search input{width:100%;border:1px solid var(--line);background:#120f0d;color:var(--text);padding:13px 15px 13px 42px;border-radius:999px;outline:none}.search svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);width:18px;opacity:.6}.chips{display:flex;gap:8px}.chip{white-space:nowrap;border:1px solid var(--line);background:#171310;color:#d8cbc2;padding:10px 14px;border-radius:999px;cursor:pointer}.chip:hover,.chip.active{background:var(--brand);border-color:var(--brand);color:white}
+main{padding:38px 0 70px}.section{scroll-margin-top:86px;margin:0 0 44px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:18px}.section h2{font-family:Georgia,serif;text-transform:uppercase;letter-spacing:.14em;font-size:clamp(1.35rem,3vw,2rem);margin:0;color:var(--gold)}.section-count{color:var(--muted);font-size:.9rem}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:148px;transition:.2s transform,.2s border-color}.card:hover{transform:translateY(-3px);border-color:#5f4438}.card-top{display:flex;justify-content:space-between;gap:16px}.name{font-family:Georgia,serif;font-weight:700;font-size:1.14rem;line-height:1.25}.price{color:#ffe0aa;font-weight:800;font-size:1.06rem;white-space:nowrap}.desc{margin:10px 0 0;color:var(--muted);line-height:1.48;font-size:.94rem}.badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto;padding-top:14px}.badge{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;border-radius:999px;padding:5px 8px;background:#28201b;color:#d7c7bc}.badge.v{background:rgba(112,181,125,.14);color:#9dddab;border:1px solid rgba(112,181,125,.32)}
+.badge.allergen{background:var(--allergy-bg);color:#ffd39a;border:1px solid var(--allergy-line)}
+.allergen-word{background:var(--allergy-bg);color:#ffd39a;border-bottom:1px solid var(--allergy-line);border-radius:4px;padding:0 .15em;font-weight:750}
+.allergy-key{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:0 0 22px}
+.allergy-key span{font-size:.78rem;border:1px solid var(--allergy-line);background:var(--allergy-bg);color:#ffd39a;border-radius:999px;padding:6px 10px}
+.card.has-allergen{border-color:rgba(255,180,84,.28)}
+.card.has-allergen:hover{border-color:rgba(255,180,84,.62)}
+.allergy-note{border-color:var(--allergy-line);background:linear-gradient(145deg,rgba(255,180,84,.10),#18120d)}
+.note{border:1px solid #55402e;background:#18120d;border-radius:16px;padding:17px 20px;color:#dbcbbf;text-align:center;margin-top:20px}.hidden{display:none!important}.empty{text-align:center;color:var(--muted);padding:60px 10px;display:none}footer{text-align:center;color:#82746b;padding:0 0 40px;font-size:.88rem}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){header{padding-top:34px}.grid{grid-template-columns:1fr}.toolbar-inner{align-items:stretch;flex-direction:column}.chips{overflow:auto}.search{width:100%}.card{min-height:0}.section{margin-bottom:34px}}
+@media print{.toolbar,.tagline{display:none}body{background:#fff;color:#111}.brand{color:#7d3f34}.card{box-shadow:none;background:#fff;color:#111;break-inside:avoid}.desc,.section-count{color:#444}.grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<header class="wrap"><div class="brand">PARADE</div><div class="subbrand">CAFE · BISTRO</div><p class="tagline">Food menu only — breakfast, brunch, sandwiches, salads, burgers, pasta, grills, fish and children’s favourites.</p></header>
+<nav class="toolbar"><div class="wrap toolbar-inner"><label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><input id="search" type="search" placeholder="Search dishes or ingredients…" aria-label="Search menu"></label><div class="chips" id="chips"><button class="chip active" data-filter="all">All food</button><button class="chip" data-filter="vegetarian">Vegetarian</button><button class="chip" data-filter="vegan">Vegan</button><button class="chip active-allergy" id="allergyToggle" type="button" aria-pressed="true">Allergy highlights: On</button></div></div></nav>
+<main class="wrap">
+<div class="allergy-key" aria-label="Allergen highlight key">
+<span>Highlighted words = declared allergen ingredients</span>
+<span>Badges show allergen groups found in the dish text</span>
+</div>
+<div id="menu"></div>
+</main><div class="empty" id="empty">No dishes match your search.</div>
+<footer class="wrap">Please inform your server of any allergies or dietary requirements.</footer>
+<a href="/order">Order</a>
+<script>
+const menuData = [
+{section:'All Day Breakfast / Brunch',items:[
+['Full English','2 eggs, 2 slices bacon, 2 sausages, mushroom, hash brown, beans and toast.','10.95'],['Classic','Egg, 2 slices bacon, sausage, mushrooms, beans and toast.','9.95'],["Chef’s",'2 eggs, 2 slices bacon, sausage, chips, beans and toast.','10.50'],['Veggie','2 eggs, vegetarian sausage, halloumi, hash brown, mushrooms, grilled tomato, beans and toast.','10.50','vegetarian'],['Vegan','4 falafel balls, beans or grilled tomato, mushrooms, hash brown, bubble, spinach and toast.','10.50','vegan'],['Fresh Start','Smoked salmon, 2 poached eggs, spinach, grilled tomato, crushed avocado, halloumi and toast.','11.50'],['Mediterranean','Sucuk (Turkish sausage), halloumi, feta, olives, 2 eggs, fresh tomato, cucumber and toast.','11.50'],['Alternative Power','2 eggs, 2 slices turkey rashers, 2 chicken sausages, mushroom, hash brown, beans and toast.','10.95'],['American Pancakes','3 fluffy pancakes, streaky bacon, scrambled eggs and sausage, served with jam or maple syrup.','9.45'],['French Toast','Pan-fried brioche dipped in egg and cinnamon, served with fruit and maple syrup.','8.95'],['Special Toast','Granary toast with smashed avocado, chopped tomato and onion, feta and a poached egg, drizzled with balsamic or pomegranate sauce.','8.95','vegetarian'],['Avocado Chicken Sourdough','Grilled chicken, avocado, rocket, mixed leaves, cucumber, cherry tomato, onion and feta on sourdough toast with balsamic glaze.','11.75'],['Eggs Benedict','2 poached eggs on English muffin with ham or bacon and hollandaise sauce.','9.50'],['Eggs Florentine','2 poached eggs on English muffin with spinach and hollandaise sauce.','9.50','vegetarian'],['Avo Egg Florentine','2 poached eggs on muffin with crushed avocado, spinach and hollandaise sauce.','10.45','vegetarian'],['Eggs Royal','2 poached eggs on English muffin with smoked salmon and hollandaise sauce.','9.95'],['Poached Eggs and Avocado','2 poached eggs on English muffin or toast with crushed avocado.','9.25','vegetarian'],['Salmon Special','Smoked salmon with your choice of poached, fried or scrambled egg.','9.95']]},
+{section:'Muffins, Omelette & Skillets',items:[['Breakfast Muffins','Served with a hash brown. Bacon, egg & cheese £6.45 · Sausage, egg & cheese £6.45 · Bacon, sausage, egg & cheese £7.45.','from 6.45'],['Toast Option','Toast with mushroom, crushed avocado or beans.','—','vegetarian'],['Omelette','3 eggs with up to 2 fillings, served with chips or salad. Extra fillings available.','9.95'],['Sunrise Skillet','3 eggs, fresh tomato, bell pepper, cooked with butter and served with toasted bread.','9.95','vegetarian']]},
+{section:'Rolls',items:[['Sausage or Bacon','','5.25'],['2 Eggs','','6.25'],['Sausage and Bacon','','6.25'],['Breakfast Roll','Sausage, bacon and egg.','7.25']]},
+{section:'Sandwiches, Paninis & Wraps',items:[['Sausage or Bacon','Hot filling.','5.75'],['2 Eggs','Hot filling.','6.75'],['Sausage and Bacon','Hot filling.','6.75'],['Breakfast','Sausage, bacon and egg.','7.75'],['Marinated Grilled Chicken Breast & Salad','','8.45'],['Grilled Chicken Breast, Bacon & Avocado','Marinated chicken breast with bacon and crushed avocado.','9.25'],['Grilled Chicken Breast and Mozzarella','','8.75'],['Chicken Strips with Salad and Mayo','Wrap.','8.50'],['BLT','Bacon, lettuce, tomato and mayo.','6.50'],['Steak Baguette','Thinly sliced steak with fried onions and mushroom.','9.50'],['Ham, Mozzarella, Tomato, Basil & Rocket','','6.75'],['Mozzarella, Sun-dried Tomatoes & Pesto','','6.00','vegetarian'],['Tuna & Sweetcorn with Melted Cheddar','','6.50'],['Ham and Cheese','','6.50'],['Chicken Mayo Sweetcorn','Cold filling.','6.75'],['Prawn Mayo','Cold filling.','7.75'],['Tuna Mayo Sweetcorn','Cold filling.','6.25'],['Prawn & Crushed Avocado with Seafood Sauce','Cold filling.','8.75'],['Smoked Salmon with Cream Cheese, Lemon & Chives','Cold filling.','7.75'],['Egg','Fried, scrambled or egg mayo.','5.50','vegetarian'],['Ham','Cold filling.','5.50']]},
+{section:'Mediterranean Way',items:[['Grilled Halloumi and Chicken Breakfast','Grilled halloumi, grilled chicken and piccalilli with hummus, fresh tomato and cucumber in baguette or panini.','8.70'],['Sucuk and Halloumi Stack','Sucuk and halloumi with fresh tomato and cucumber, served with mayonnaise and piccalilli in baguette or wrap.','8.25'],['Veggie Halloumi Wrap','Halloumi, falafel, hummus, fresh tomato and rocket with pomegranate sauce and glaze.','8.25','vegetarian']]},
+{section:'Salads',items:[['Mediterranean Salad','Feta, olives, tomato, cucumber, red onion, mixed salad leaves and chef’s dressing.','7.75','vegetarian'],['Caesar Salad','Baby gem, parmesan, croutons and Caesar dressing.','6.25'],['Orchard Blue Salad','Wild rocket, blue cheese, apple, pear, walnuts and croutons with salad dressing.','8.75','vegetarian'],['Garden Chicken Salad','Grilled chicken breast with mixed leaves, tomatoes, cucumbers, red onion and chef’s special dressing.','10.25'],['The Bistro Chicken Salad','Grilled chicken breast, streaky bacon, avocado, rocket, mixed leaves, cherry tomatoes, cucumber, red onion and balsamic glaze.','12.75']]},
+{section:'Burgers',items:[['Quarter Pounder','With onion and lettuce, served with mayo, ketchup or chef’s special burger sauce. Served with chips.','11.50'],['Half Pounder','With onion and lettuce, served with mayo, ketchup or chef’s special burger sauce. Served with chips.','13.75'],['Grilled Chicken Burger','Topped with salad, served with mayo, ketchup or chef’s special burger sauce. Served with chips.','11.75'],['Halloumi Burger','With mushrooms and lettuce, served with sweet chilli sauce and chips.','11.25','vegetarian'],['Cod Burger','With lettuce, served with tartar sauce and chips.','11.75']]},
+{section:'Pasta',items:[['Spaghetti Bolognese','Rich minced beef with special ragu on spaghetti, sprinkled with parmesan.','10.75'],['Penne Carbonara','With bacon, parmesan, egg and a touch of cream.','9.00'],['Vegetarian Lasagne','Pasta layers with vegetables in cheese sauce, served with garlic bread and salad.','10.75','vegetarian'],['Meat Lasagne','Pasta layers with rich beef ragu and cheese sauce, served with garlic bread and salad.','11.75'],['Penne Pollo','Penne with grilled chicken, bacon, onions and vegetables in creamy tomato sauce, topped with cheese and baked.','12.95'],['Prawn Spaghetti','Spaghetti in spicy garlic, tomato and basil sauce with cream and prawns.','14.75']]},
+{section:'Jacket Potatoes',items:[['Standard Choice','Cheese, baked beans, tuna & sweetcorn, chicken mayo, chilli con carne, bolognese or coleslaw. Served with butter and salad.','9.75'],['With Prawns and Mayo','Served with butter and salad.','11.50']]},
+{section:'Meat and Chicken',items:[['Chicken Shish','Chargrilled marinated chicken breast cubes with rice, couscous or chips and salad, chef’s sauce and pitta.','15.50'],['Chicken Grill','Chargrilled marinated chicken breast fillet with rice, couscous or chips and salad, chef’s sauce and pitta.','16.25'],['Lamb Chops','3 chargrilled lamb chops with rice, couscous or chips and salad, chef’s sauce and pitta.','20.90'],['Rib Eye Steak','Chargrilled to your preference with rice, couscous or chips and salad.','20.75'],['Bangers and Mash','Cumberland sausages on creamy mash with fried onions and gravy.','11.50'],['Chilli-con-carne and Rice','Slowly cooked beef mince in spicy tomato sauce with kidney beans, served with rice.','10.75'],['Ham or Sausage, Egg and Chips','3 slices ham or 2 Cumberland sausages, 2 fried eggs and chips.','11.50'],['Steak Pie','Diced beef in rich gravy, topped with puff pastry, seasonal vegetables and chips or mash.','11.95'],['Lamb Kofte Kebab','Chargrilled minced lamb with herbs and spices, rice, couscous or chips and salad.','16.25'],['Lamb Shish','Marinated grilled lamb char, rice, couscous or chips and salad.','19.25'],['Halloumi Shish','Cyprus halloumi cubes grilled with vegetables.','15.25','vegetarian']]},
+{section:'Fish Dishes',items:[['Sea Bassa','Pan-fried sea bass with new potatoes and roasted vegetables.','17.25'],['Salmon Special','Chargrilled salmon fillet with new potatoes and roasted vegetables.','14.75'],['Scampi and Chips','Breaded whole-tail scampi with chips, side salad and tartar sauce.','12.75'],['Garlic Butter King Prawn','King prawns sautéed in garlic butter with lemon, rocket and sourdough bread, plus chips or rice.','13.25']]},
+{section:'Kids Menu',items:[['Spaghetti Bolognese','','6.50'],['Cheesy Tomato Pasta','','6.50','vegetarian'],['Burger and Chips','','6.50'],['100% Fillet Chicken Nuggets & Chips','5 pieces.','6.50'],['100% Fillet Fish Fingers & Chips','4 pieces.','6.50'],['Kids Breakfast','Free-range egg, sausage or bacon, beans and toast.','6.50'],['Egg, Sausage and Chips','','5.75'],['Egg, Bacon and Chips','','5.75'],['Kids Pancakes','2 fluffy pancakes with fruits and chocolate sauce.','6.50','vegetarian']]}
+];
+const menu=document.querySelector('#menu');
+
+const allergenRules = [
+  {name:'Gluten', words:['bread','toast','granary','sourdough','muffin','brioche','pitta','baguette','panini','wrap','pasta','spaghetti','penne','lasagne','croutons','pastry','pancake','pancakes','hash brown']},
+  {name:'Egg', words:['egg','eggs','mayonnaise','mayo','hollandaise']},
+  {name:'Milk', words:['milk','cheese','cheddar','halloumi','feta','mozzarella','parmesan','cream','butter','blue cheese']},
+  {name:'Fish', words:['salmon','tuna','cod','sea bass','sea bassa','fish fingers','tartar']},
+  {name:'Crustaceans', words:['prawn','prawns','scampi']},
+  {name:'Nuts', words:['walnut','walnuts']},
+  {name:'Sesame', words:['sesame']},
+  {name:'Soya', words:['soya','soy']},
+  {name:'Mustard', words:['mustard']},
+  {name:'Celery', words:['celery']},
+  {name:'Sulphites', words:['sulphite','sulphites','wine']},
+  {name:'Molluscs', words:['mollusc','molluscs','mussel','mussels','squid']},
+  {name:'Peanuts', words:['peanut','peanuts']},
+  {name:'Lupin', words:['lupin']}
+];
+
+let allergyHighlightsOn = true;
+
+function escRegex(value){
+  return value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+}
+
+function allergensFor(text){
+  const lower = text.toLowerCase();
+  return allergenRules
+    .filter(rule => rule.words.some(word => new RegExp(`\\b${escRegex(word)}\\b`, 'i').test(lower)))
+    .map(rule => rule.name);
+}
+
+function highlightAllergens(text){
+  if(!allergyHighlightsOn || !text) return text;
+  const words = [...new Set(allergenRules.flatMap(rule => rule.words))]
+    .sort((a,b)=>b.length-a.length);
+  const rx = new RegExp(`\\b(${words.map(escRegex).join('|')})\\b`, 'gi');
+  return text.replace(rx, '<mark class="allergen-word">$1</mark>');
+}
+
+function render(){
+  menu.innerHTML = menuData.map((s,si)=>`
+    <section class="section" data-section="${si}">
+      <div class="section-head">
+        <h2>${s.section}</h2>
+        <span class="section-count">${s.items.length} items</span>
+      </div>
+      <div class="grid">
+        ${s.items.map(i=>{
+          const combined = `${i[0]} ${i[1]||''}`;
+          const allergens = allergensFor(combined);
+          return `<article class="card ${allergens.length?'has-allergen':''}" data-tags="${i[3]||''}" data-search="${combined.toLowerCase()}">
+            <div class="card-top">
+              <div class="name">${highlightAllergens(i[0])}</div>
+              <div class="price">${i[2]==='—'?'—':'£'+i[2]}</div>
+            </div>
+            ${i[1]?`<p class="desc">${highlightAllergens(i[1])}</p>`:''}
+            <div class="badges">
+              ${i[3]==='vegetarian'?'<span class="badge v">Vegetarian</span>':''}
+              ${i[3]==='vegan'?'<span class="badge v">Vegan</span><span class="badge v">Vegetarian</span>':''}
+              ${allergens.map(a=>`<span class="badge allergen">${a}</span>`).join('')}
+            </div>
+          </article>`;
+        }).join('')}
+      </div>
+    </section>`).join('') + `
+    <div class="note allergy-note">
+      <strong>Allergy notice:</strong> highlights are generated only from ingredients written in this menu.
+      Recipes, sauces, cooking oils and cross-contamination may contain additional allergens.
+      Please confirm every allergy with a member of staff before ordering.
+    </div>`;
+}
+render();
+let active='all';
+function apply(){const q=document.querySelector('#search').value.trim().toLowerCase();let visible=0;document.querySelectorAll('.card').forEach(c=>{const tag=c.dataset.tags;const okFilter=active==='all'||tag===active||(active==='vegetarian'&&tag==='vegan');const okSearch=!q||c.dataset.search.includes(q);const show=okFilter&&okSearch;c.classList.toggle('hidden',!show);if(show)visible++});document.querySelectorAll('.section').forEach(s=>{const n=[...s.querySelectorAll('.card:not(.hidden)')].length;s.classList.toggle('hidden',n===0);s.querySelector('.section-count').textContent=`${n} item${n===1?'':'s'}`});document.querySelector('#empty').style.display=visible?'none':'block'}
+document.querySelector('#search').addEventListener('input',apply);document.querySelector('#chips').addEventListener('click',e=>{if(!e.target.matches('.chip'))return;document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));e.target.classList.add('active');active=e.target.dataset.filter;apply()});
+
+document.querySelector('#allergyToggle').addEventListener('click',()=>{
+  allergyHighlightsOn = !allergyHighlightsOn;
+  const btn = document.querySelector('#allergyToggle');
+  btn.textContent = `Allergy highlights: ${allergyHighlightsOn?'On':'Off'}`;
+  btn.setAttribute('aria-pressed', String(allergyHighlightsOn));
+  btn.classList.toggle('active-allergy', allergyHighlightsOn);
+  render();
+  apply();
+});
+
+</script>
+</body>
+</html>
